@@ -1,7 +1,7 @@
 CC = gcc
 IDIR = .
 CFLAGS = -Wall -I$(IDIR)
-DEPS = alg_c_comparison_counting.c comparison_counting.c
+DEPS = alg_c_comparison_counting.c comparison_count.c
 OBJ = comp_count
 
 $(OBJ): $(DEPS)
