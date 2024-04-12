@@ -11,14 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: build_and_test
+    - name: build
       run: |
         cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting
         make;
-        
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: build_and_test
+    - name: run-test
       run: ./runtests.bash
