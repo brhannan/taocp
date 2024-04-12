@@ -14,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: make
-      run: cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting; ./runtests
+      run: cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting; ./runtests.bash
