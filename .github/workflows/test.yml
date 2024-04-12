@@ -14,6 +14,8 @@ jobs:
     - name: build
       run: |
         cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting
-        make;
+        make
     - name: run-test
-      run: ./runtests.bash
+      run: |
+        cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting
+        ./runtests.bash
