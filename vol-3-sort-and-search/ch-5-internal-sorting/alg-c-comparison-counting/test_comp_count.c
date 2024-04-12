@@ -49,6 +49,9 @@ bool test_example_c() {
     int len = sizeof(K) / sizeof(K[0]);
     comparison_count(len, K, count);
     bool passed = are_arrays_equal(count, count_exp, len);
+    if (!passed) {
+        printf("test_example_c failed.\n");
+    }
     return passed;
 }
 
