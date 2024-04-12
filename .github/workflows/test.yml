@@ -8,10 +8,17 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     - name: build_and_test
-      run: cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting; make; ./runtests.bash
+      run: |
+        cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting
+        make;
+        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: build_and_test
+      run: ./runtests.bash
