@@ -1,5 +1,4 @@
 #!/bin/bash
-make
 ./test_comp_count
 
 exit_code=$?
