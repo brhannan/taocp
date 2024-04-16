@@ -11,10 +11,10 @@ int main() {
     bool test_suite_success = true;
 
     bool test_simple_array_passed = test_simple_array();
-    test_suite_success = test_suite_success & test_simple_array_passed;
+    test_suite_success = test_suite_success && test_simple_array_passed;
 
     bool test_example_c_passed = test_example_c();
-    test_suite_success = test_suite_success & test_example_c_passed;
+    test_suite_success = test_suite_success && test_example_c_passed;
 
     if (test_suite_success) {
         printf("All tests passed.\n");
