@@ -17,11 +17,11 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: build
-      working-directory: $BUILD_DIR
+      working-directory: ${BUILD_DIR}
       run: |
         cmake ..
         make
 
     - name: test
-      working-directory: $BUILD_DIR
+      working-directory: ${BUILD_DIR}
       run: ./$EXENAME
