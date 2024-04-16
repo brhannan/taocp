@@ -11,12 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+
     - name: build
+      working-directory: vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
       run: |
-        cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
         cmake ..
         make
-    - name: run-test
+
+    - name: test
+      working-directory: vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
       run: |
-        cd vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
         ./comparison_count
