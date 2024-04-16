@@ -9,16 +9,19 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      EXENAME: comparison_count
+      BUILD_DIR: vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
+    
     steps:
     - uses: actions/checkout@v4
 
     - name: build
-      working-directory: vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
+      working-directory: $BUILD_DIR
       run: |
         cmake ..
         make
 
     - name: test
-      working-directory: vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
-      run: |
-        ./comparison_count
+      working-directory: $BUILD_DIR
+      run: ./$EXENAME
