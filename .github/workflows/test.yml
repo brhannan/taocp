@@ -9,8 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     env:
-      EXENAME: comparison_count
+      EXENAME: comparison_count_tests
       BUILD_DIR: vol-3-sort-and-search/ch-5-internal-sorting/alg-c-comparison-counting/build
     
     steps:
@@ -24,4 +25,4 @@ jobs:
 
     - name: test
       working-directory: ${{env.BUILD_DIR}}
-      run: ./$EXENAME
+      run: ./test/$EXENAME

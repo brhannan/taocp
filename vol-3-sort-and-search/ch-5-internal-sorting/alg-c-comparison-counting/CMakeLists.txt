@@ -1,5 +1,16 @@
 cmake_minimum_required(VERSION 3.14)
 project(comparison_count)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+enable_testing()
+include(GoogleTest)
+
 include_directories("${PROJECT_SOURCE_DIR}/include")
-file(GLOB sources "${PROJECT_SOURCE_DIR}/src/*.c")
-add_executable(comparison_count ${sources})
+
+add_subdirectory(
+    "${PROJECT_SOURCE_DIR}/../../../googletest"
+    "googletest"
+    )
+add_subdirectory(test)
