@@ -24,6 +24,7 @@ TEST(comparison_count_tests, two_elems) {
     }
 }
 
+// Reproduce the example from Sect. 5.2 Tab. 1.
 TEST(comparison_count_tests, example_c) {
     int K[] = {503, 87, 512, 061, 908, 170, 897, 275, 653, 426, 154, 509, 612, 
         677, 765, 703};
