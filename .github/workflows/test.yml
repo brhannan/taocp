@@ -28,3 +28,7 @@ jobs:
     - name: test
       working-directory: ${{env.BUILD_DIR}}
       run: ./test/$EXENAME
+
+    - name: coverage
+      working-directory: ${{env.BUILD_DIR}}
+      run: gcovr -r
