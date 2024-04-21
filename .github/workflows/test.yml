@@ -30,8 +30,7 @@ jobs:
       run: ./test/$EXENAME
 
     - name: coverage
-      working-directory: ${{env.BUILD_DIR}}/build
+      working-directory: ${{env.BUILD_DIR}}
       run: |
-        echo "cwd = $PWD"
         pip install gcovr
         gcovr -r ../ .
