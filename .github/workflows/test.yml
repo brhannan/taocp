@@ -31,4 +31,6 @@ jobs:
 
     - name: coverage
       working-directory: ${{env.BUILD_DIR}}
-      run: pip install gcovr; gcovr -r
+      run: |
+        pip install gcovr
+        gcovr -r .
