@@ -32,6 +32,6 @@ jobs:
     - name: coverage
       working-directory: ${{env.BUILD_DIR}}/build
       run: |
-        echo "cwd = ${pwd}"
+        echo "cwd = $PWD"
         pip install gcovr
         gcovr -r ../ .
