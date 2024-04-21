@@ -32,5 +32,6 @@ jobs:
     - name: coverage
       working-directory: ${{env.BUILD_DIR}}
       run: |
+        echo "current dir is ${{env.BUILD_DIR}}"
         pip install gcovr
-        gcovr -r .
+        gcovr -r test/
