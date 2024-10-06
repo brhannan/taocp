@@ -11,7 +11,7 @@ include(GoogleTest)
 include_directories("${PROJECT_SOURCE_DIR}/include")
 
 add_subdirectory(
-    "${PROJECT_SOURCE_DIR}/../../../googletest"
+    "${PROJECT_SOURCE_DIR}/../googletest"
     "googletest"
     )
 add_subdirectory(test)
