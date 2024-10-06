@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      EXENAME: comparison_count_tests
       BUILD_DIR: vol-3-sort-and-search/build
     
     steps:
