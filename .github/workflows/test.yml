@@ -28,9 +28,12 @@ jobs:
     - name: test
       working-directory: ${{env.BUILD_DIR}}
       run: |
-        ./test/$EXENAME
-        ./test/distribution_count_tests
-
+          EXECUTABLES=$(find . -maxdepth 1 -type f -executable -execdir basename {} \;)
+          for exe in $EXECUTABLES; do 
+            echo "Running test: $exe"
+            ./path/to/directory/$exe || { echo "$exe failed"; exit 1; }
+          done
+  
     - name: coverage
       working-directory: ${{env.BUILD_DIR}}
       run: |
