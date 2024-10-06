@@ -27,7 +27,9 @@ jobs:
 
     - name: test
       working-directory: ${{env.BUILD_DIR}}
-      run: ./test/$EXENAME
+      run: |
+        ./test/$EXENAME
+        ./test/distribution_count_tests
 
     - name: coverage
       working-directory: ${{env.BUILD_DIR}}
