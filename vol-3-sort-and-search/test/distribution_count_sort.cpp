@@ -23,3 +23,14 @@ TEST(distribution_count_tests, two_elems) {
         ASSERT_EQ(S[i], S_exp[i]);
     }
 }
+
+TEST(distribution_count_tests, five_elems) {
+    unsigned int K[] = {3, 2, 5, 4, 6};
+    unsigned int S[] = {0, 0, 0, 0, 0};
+    unsigned int S_exp[] = {2, 3, 4, 5, 6};
+    unsigned int len = 5;
+    distribution_count_sort(K, S, len);
+    for(unsigned int i = 0; i<len; i++) {
+        ASSERT_EQ(S[i], S_exp[i]);
+    }
+}
