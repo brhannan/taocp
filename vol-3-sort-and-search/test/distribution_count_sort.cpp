@@ -14,7 +14,6 @@ TEST(distribution_count_tests, single_elem) {
 }
 
 TEST(distribution_count_tests, two_elems) {
-    int K[] = {1, 0};
     unsigned int K[] = {0, 0};
     unsigned int S[] = {0, 0};
     unsigned int S_exp[] = {0, 0};
