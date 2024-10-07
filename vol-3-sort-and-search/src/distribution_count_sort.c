@@ -9,13 +9,13 @@ void distribution_count_sort(const unsigned int K[], unsigned int S[],
     unsigned int count_size = k_max + 1;
     unsigned int count[count_size];
     memset(count, 0, sizeof(count));
-    for (unsigned int j=0; j<len; j++) {
-        count[K[j]] += 1;
+    for (unsigned int c=0; c<len; c++) {
+        count[K[c]] += 1;
     }
     for (unsigned int i=1; i<count_size; i++) {
         count[i] += count[i-1];
     }
-    for (unsigned int j=len; j>0; j -= 1) {
+    for (unsigned int j=len; j>0; j--) {
         unsigned int k_j = K[j-1];
         unsigned int i = count[k_j];
         S[i-1] = k_j;
