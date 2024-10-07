@@ -5,7 +5,7 @@
  * Performs a distribution counting sort on the integers in K. 
  * Outputs to array S.
  */
-void distribution_count_sort(const unsigned int len, const unsigned int K[], 
-    unsigned int S[]);
+void distribution_count_sort(const unsigned int K[], 
+    unsigned int S[], const unsigned int len);
 
 #endif
