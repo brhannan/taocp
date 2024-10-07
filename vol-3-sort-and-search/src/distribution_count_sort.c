@@ -1,11 +1,11 @@
 #include "distribution_count_sort.h"
-#include <limits.h>
 #include <string.h>
 
-int get_max(const int K[], const unsigned int len);
+static int get_max(const unsigned int K[], const unsigned int len);
 
-void distribution_count_sort(const unsigned int len, const int K[], int S[]) {
-    int k_max = get_max(K, len);
+void distribution_count_sort(const unsigned int len, const unsigned int K[], 
+    unsigned int S[]) {
+    unsigned int k_max = get_max(K, len);
     int count_size = k_max + 1;
     unsigned int count[count_size];
     memset(count, 0, sizeof(count));
@@ -20,17 +20,17 @@ void distribution_count_sort(const unsigned int len, const int K[], int S[]) {
     }
     /* Loop on j. */
     for (unsigned int j=len; j>0; j -= 1) {
-        int k_j = K[j-1];
+        unsigned int k_j = K[j-1];
         unsigned int i = count[k_j];
         S[i-1] = k_j;
         count[k_j] = count[k_j] - 1;
     }
 }
 
-int get_max(const int K[], const unsigned int len) {
-    int max = INT_MIN;
+int get_max(const unsigned int K[], const unsigned int len) {
+    unsigned int max = 0;
     for (unsigned int k=0; k<len; k++) {
-        int val = K[k];
+        unsigned int val = K[k];
         if (val>max) {
             max = val;
         }

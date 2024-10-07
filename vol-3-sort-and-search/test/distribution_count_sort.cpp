@@ -5,8 +5,8 @@ extern "C" {
 }
 
 TEST(distribution_count_tests, single_elem) {
-    int K[] = {1};
-    int S[] = {0};
+    unsigned int K[] = {1};
+    unsigned int S[] = {0};
     unsigned int S_exp[] = {1};
     unsigned int len = 1;
     distribution_count_sort(len, K, S);
