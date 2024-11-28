@@ -12,4 +12,3 @@ TEST(distribution_count_tests, single_elem) {
     distribution_count_sort(len, K, S);
     ASSERT_EQ(S[0], S_exp[0]);
 }
-
