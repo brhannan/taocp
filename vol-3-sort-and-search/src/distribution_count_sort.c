@@ -1,5 +1,6 @@
 #include "distribution_count_sort.h"
 #include <string.h>
+#include <stdint.h>
 
 static unsigned int get_max(const unsigned int K[], const unsigned int len);
 
